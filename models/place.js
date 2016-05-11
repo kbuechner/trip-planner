@@ -6,7 +6,10 @@ var Place = db.define('place', {
   city: Sequelize.STRING,
   state: Sequelize.STRING,
   phone: Sequelize.STRING,
-  location: Sequelize.ARRAY(Sequelize.DOUBLE)
+  location: {
+    type: Sequelize.ARRAY(Sequelize.DOUBLE),
+    allowNull: false
+  }
 });
 
 module.exports = Place;
