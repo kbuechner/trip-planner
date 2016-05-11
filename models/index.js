@@ -1,16 +1,13 @@
 var db = require('./_db');
-var Hotel = require('./hotel')(db);
-var Place = require('./place')(db);
-var Restaraunt = require('./restaraunt')(db);
-var Activity = require('./activity')(db);
 
-// Place
-// Restaraunt
-// Activity 
-
+var Place = require('./place');
+var Hotel = require('./hotel');
+var Restaurant = require('./restaurant');
+var Activity = require('./activity');
 
 Hotel.belongsTo(Place);
-Restaraunt.belongsTo(Place);
+Restaurant.belongsTo(Place);
 Activity.belongsTo(Place);
 
-module.exports = db; 
+
+module.exports = db;

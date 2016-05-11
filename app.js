@@ -1,13 +1,11 @@
-var express = require('express'); 
-var swig = require('swig'); 
-var bodyParser = require('body-parser'); 
-var morgan = require('morgan'); 
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+var swig = require('swig');
 
+var db = require('./models');
 
-// var db 
-
-
-var app = express(); 
+var app = express();
 
 // swig rendering boilerplate
 app.set('views', __dirname + '/views');
@@ -19,39 +17,39 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// statically serve front-end dependencies
 
+/* 
+ app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+  app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
+*/
+
+
+// serve any other static files
 app.use(express.static(__dirname + '/public'));
 
-app.use(require('./routes'))
+// serve dynamic routes
+app.use(require('./routes'));
 
 
-console.log('PROCESS ENV', process.env)
-
+// handle any errors
 app.use(function (err, req, res, next) {
+  console.error(err, err.stack);
+  res.status(err.status || 500);
+  res.render('error', {
+    error: err
+  });
+});
 
-  res.status(err.status || 500)
-  console.error(err, err.stack)
-  // res.render('error', {
-  //   error: err
-  // })
-})
-
-
-var port = 3000; 
-app.listen(port, function(){
-  console.log("we're listening")
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// listen on a port
+var port = 3000;
+app.listen(port, function () {
+  console.log('The server is listening closely on port', port);
+  db.sync()
+  .then(function () {
+    console.log('Synchronated the database');
+  })
+  .catch(function (err) {
+    console.error('Trouble right here in River City', err, err.stack);
+  });
+});

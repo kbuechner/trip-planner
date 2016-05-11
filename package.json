@@ -4,16 +4,19 @@
   "description": "'an app that solves all your vacation woes'",
   "main": "app.js",
   "scripts": {
-    "test": "npm test", 
-    "start": "node app.js", 
+    "test": "npm test",
+    "start": "node app.js",
     "db-init": "psql -f db-init.sql"
   },
   "author": "ayana@gracehopper.com",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.3.5",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
+    "pg": "^4.5.5",
+    "pg-hstore": "^2.3.2",
     "sequelize": "^3.23.0",
     "swig": "^1.4.2"
   }

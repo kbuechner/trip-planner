@@ -1,15 +1,14 @@
-var Sequelize = require('sequelize'); 
+var Sequelize = require('sequelize');
 
 var config = {
-  "username": "gracehopper", 
+  "username": "gracehopper",
   "password": "gh",
-  "dialect": "postgres", 
-  "database": "tripplanner", 
+  "database": "tripplanner",
   "host": "127.0.0.1",
-  "port": 5432
+  "dialect": "postgres",
   "logging": false
 }
 
-var db = new Sequelize(config.database, config.username, config.password, config)
+var db = new Sequelize(config.database, config.username, config.password, config);
 
-module.exports = db; 
+module.exports = db;
