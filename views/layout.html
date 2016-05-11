@@ -1,6 +1,6 @@
 <!-- layout.html -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
  <head>
    <title>{% block title %}WikiStack{% endblock %}</title>
@@ -8,7 +8,8 @@
    <link href="/stylesheets/styles.css" rel="stylesheet">
  </head>
  <body>
-<!--    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <nav class="navbar navbar-default"></nav> <!-- Dummy nav bar -->
+   <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
      <div class="container">
        <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
@@ -17,28 +18,24 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="/">wikistack</a>
+         <a class="navbar-brand" href="/">Trip Planner</a>
        </div>
        <div id="nav-items" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
-           <li><a href="/wiki/">index</a></li>
-           <li><a href="/wiki/add">write</a></li>
-           <li><a href="/users">users</a></li>
-           <li><a href="/search">tagsearch</a></li>
-           <li><a href="/about">about</a></li>
+           <li><a href="/">Home</a></li>
+           <li><a href="/">About</a></li>
+           <li><a href="/">Content</a></li>
          </ul>
        </div>
      </div>
-   </div> -->
+   </nav>
    <div class="container content">
      {% block content %}{% endblock %}
    </div>
-   <!-- <hr/>
+   <hr/>
    <div id="footer" class="container text-muted">
-     WIKISTACK by Fullstack Academy
-   </div> -->
-
-
+  By Anna and Katie
+   </div>
    <script src="/jquery/jquery.min.js"></script>
    <script src="/bootstrap/js/bootstrap.min.js"></script>
  </body>
