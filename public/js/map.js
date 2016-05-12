@@ -8,6 +8,30 @@ function initialize_gmaps() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 
     };
+
+var styles = [
+  {
+    stylers: [
+      { hue: "#00ffe6" },
+      { saturation: -20 }
+    ]
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      { lightness: 100 },
+      { visibility: "simplified" }
+    ]
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+];
+
+
     // get the maps div's HTML obj
     var map_canvas_obj = document.getElementById("map-canvas");
     // initialize a new Google Map with the options
@@ -17,6 +41,8 @@ function initialize_gmaps() {
         position: myLatlng,
         title:"Hello World!"
     });
+    
+    map.setOptions({styles: styles});
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
 }

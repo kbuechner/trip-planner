@@ -15,7 +15,7 @@
 
         <div class="form-group">
         <label><h4>Hotels</h4></label>
-        <select name="select">
+        <select class="change">
           {% for hotel in hotels%}
           <option name ="{{hotel.name}}">{{hotel.name}}</option>
           {% endfor %}
@@ -24,7 +24,7 @@
 
         <div class="form-group">
         <label><h4>Restaurants</h4></label>  
-        <select name="select">
+        <select class="change">
           {% for restaurant in restaurants%}
           <option name ="{{restaurant.name}}">{{restaurant.name}}</option> 
           {% endfor %}
@@ -33,7 +33,7 @@
 
         <div class="form-group">
         <label><h4>Activities</h4></label>
-        <select name="select">
+        <select class="change">
           {% for activity in activities%}
           <option name ="{{activity.name}}">{{activity.name}}</option>
           {% endfor %}  
@@ -48,14 +48,19 @@
 
     <div class="day-display">
       <h2 class="day-display">DAY 2</h2>
-    </div><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br>
+    </div><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></br> 
 
     <!-- Day Number Buttons -->
     <p class="badge">1</p>
     <p class="badge">2</p>
     <p class="badge">3</p>
-    <p class="badge">4</p>
-
+    <!-- <p class="badge">4</p>
+    <p class="badge">5</p>
+    <p class="badge">6</p>
+    <p class="badge">7</p>
+    <p class="badge">8</p> -->
+    <p class="badge">+</p>
+<hr>
     <!-- Selections -->
     <section class="selections">
       <h4>My Hotel</h4>

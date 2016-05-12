@@ -1,13 +1,39 @@
-$primary-color: #fc4a1a;
+/*$primary-color: #fc4a1a;
 $primary-teal: #4a8dac;
 $primary-yellow: #f7b733;
+$primary-clean: #dfdce3;*/
+
+$primary-color: #fe6c3c;
+$primary-teal: #AFDAD6;
+$primary-yellow: #66b9bf; 
 $primary-clean: #dfdce3;
 
 body{
   background-color: $primary-teal;
-  /*color: $primary-clean;*/
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 
 }
+/*
+.select-style{
+  border: 1px solid #ccc;
+  width: 130%;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.select-style select{
+  padding: 5px 8x;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.select-style select:focus{
+  outline:none;
+}*/
 
 label, h4{
   color: $primary-color;
@@ -26,17 +52,33 @@ title{
   color: $primary-color;
 }
 
-select{
+/*.select_style .change{
   display: block;
   width: 80%;
-}
+}*/
+/*.navbar-default {
+   background-color: #22757B ;
+   border-color: $primary-clear;
+   color: $primary-clear;
+}*/
 
 p, h2{
   display: inline;
 }
 
+h2{
+  font-weight: 900;
+  font-size: 2.5em;
+  color: #22757b;
+
+}
+
+hr{
+  border-color: $primary-teal;
+}
+
 .day-display{
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
   display: inline;
   text-align: center;
 }
@@ -46,12 +88,35 @@ p, h2{
   margin: 10px 20px 10px 10px;
   background-color: $primary-color;
   text-align: center;
-  color: black;
 
-  border: solid;
-  width:30px;
+  border: solid #4a8dac;
+  width:35px;
   height:30px;
+  border-radius: 40%;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center; 
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}
+
+.badge:hover {background-color: #fc4a1a}
+
+.badge:active {
+  background-color: #fc4a1a;
+  box-shadow: 0px 0px 0px #888888;
+  transform: translateY(4px);
+}
+
+.glyphicon-remove-circle{
   border-radius: 50%;
+  box-shadow: 3px 3px 3px #888888;
 }
 
 .selections{
@@ -59,20 +124,28 @@ p, h2{
 }
 
 #map-canvas{
-  height: 100vh;
-  width: 100vh;
-  border: solid $primary-clean;
+  height: 75vh;
+  width: 100%;
+  border: solid $primary-yellow;
   border-radius: 5%;
+  margin: 10px 0 0 0;
+  box-shadow: 10px 10px 5px #888888;
 
 }
 
+.form-group{
+  text-align: left;
+}
+
 .box{
-  background-color: #eeeeee;
-  padding: 15px;
-  border: solid $primary-clean;
-  border-radius: 5%;
+  background-color: #DEE8E7;
+  padding: 20px 35px;
+  border: solid $primary-yellow;
+  border-radius: 9%;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px 0 10px 0;
+  box-shadow: 10px 10px 5px #888888;
+
 
   /*background-color: #eeeeee; *//* For browsers that do not support gradients */
   /*background-color: -webkit-linear-gradient(left top, #eeeeee;, #fff);*/ /* For Safari 5.1 to 6.0 */
