@@ -1,4 +1,13 @@
-$primary-color: orange;
+$primary-color: #fc4a1a;
+$primary-teal: #4a8dac;
+$primary-yellow: #f7b733;
+$primary-clean: #dfdce3;
+
+body{
+  background-color: $primary-teal;
+  /*color: $primary-clean;*/
+
+}
 
 label, h4{
   color: $primary-color;
@@ -49,12 +58,21 @@ p, h2{
   text-align: left;
 }
 
+#map-canvas{
+  height: 100vh;
+  width: 100vh;
+  border: solid $primary-clean;
+  border-radius: 5%;
+
+}
+
 .box{
   background-color: #eeeeee;
   padding: 15px;
-  border: solid gray;
+  border: solid $primary-clean;
   border-radius: 5%;
   text-align: center;
+  margin-bottom: 10px;
 
   /*background-color: #eeeeee; *//* For browsers that do not support gradients */
   /*background-color: -webkit-linear-gradient(left top, #eeeeee;, #fff);*/ /* For Safari 5.1 to 6.0 */

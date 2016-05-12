@@ -1,5 +1,9 @@
+body {
+  background-color: #4a8dac;
+  /*color: $primary-clean;*/ }
+
 label, h4 {
-  color: orange;
+  color: #fc4a1a;
   margin: 0 0 5px 0;
   font-size: 17px; }
 
@@ -9,7 +13,7 @@ li {
   list-style-type: none; }
 
 title {
-  color: orange; }
+  color: #fc4a1a; }
 
 select {
   display: block;
@@ -26,7 +30,7 @@ p, h2 {
 .badge {
   display: inline-block;
   margin: 10px 20px 10px 10px;
-  background-color: orange;
+  background-color: #fc4a1a;
   text-align: center;
   color: black;
   border: solid;
@@ -37,12 +41,19 @@ p, h2 {
 .selections {
   text-align: left; }
 
+#map-canvas {
+  height: 100vh;
+  width: 100vh;
+  border: solid #dfdce3;
+  border-radius: 5%; }
+
 .box {
   background-color: #eeeeee;
   padding: 15px;
-  border: solid gray;
+  border: solid #dfdce3;
   border-radius: 5%;
   text-align: center;
+  margin-bottom: 10px;
   /*background-color: #eeeeee; */
   /* For browsers that do not support gradients */
   /*background-color: -webkit-linear-gradient(left top, #eeeeee;, #fff);*/
