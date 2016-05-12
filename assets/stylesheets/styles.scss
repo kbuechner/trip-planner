@@ -1,0 +1,29 @@
+$primary-color: orange;
+
+label, h4{
+  color: $primary-color;
+  margin: 0 0 5px 0;
+  font-size: 17px;
+}
+
+li{
+  display: inline;
+  padding: 0 15px 0 0;
+  list-style-type: none;
+
+}
+
+title{
+  color: $primary-color;
+}
+
+select{
+  display: block;
+  width: 80%;
+}
+
+.box{
+  padding: 15px;
+  border: solid red;
+  border-radius: 5%;
+}
