@@ -33,8 +33,15 @@ function addActivities(){
 //addToDay (string, string) => updates dom
 function addToDay(item, table){
 	var dayEl = $("#"+table+"-list")
-	dayEl.append("<li>"+item+"</li><span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></br>");
-	console.log("HERE", dayEl);
+	dayEl.append("<li id=" + item + ">" + item + "<span data-value = " + item + " class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></li>");
+}
+
+function removeFromDay(item){
+//TO IMPLEMENT: fix remove
+	var removeBtnParent = $(item).attr("data-value");
+	$("#"+removeBtnParent).remove()
+//.remove();
+//	var dayEl = $()
 }
 
 //selects item like hotel 
@@ -65,7 +72,11 @@ $(".addDay").on("click", function(){
 	$(".badge-day-display").append("<p class='badge day' id = " + numOfDays +">" + numOfDays+ "</p>")
 	console.log($("#"+numOfDays));
 });
-
+//grab the item associated w/the glyphicon
+//TO IMPLEMENT: make this fadeout
+$(".selections").on("click", ".glyphicon-remove-circle", function(e){
+	removeFromDay(e.target);
+})
 
 addHotels();
 addRestaurant();
